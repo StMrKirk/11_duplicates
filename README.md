@@ -1,6 +1,16 @@
 # Anti-Duplicator
 
-[TODO. There will be project description]
+Programm output duplicate files of use folder.
+
+# QuickStart
+
+Windows 10, PS:
+```#!bash
+
+PS C:\ python duplicates.py <your path>
+Дубликаты: Х Имена и пути к файлам:
+...
+```
 
 # Project Goals
 
