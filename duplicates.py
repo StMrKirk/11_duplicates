@@ -20,10 +20,9 @@ def data_check(directory):
 def check_for_same_name(directory):
     data_check_result = data_check(directory)
     for file_size in data_check_result.keys():
-        list_of_lists_file_size = [[file_item, file_item] for file_item in data_check_result[file_size]]
-        same_name__file_dict = [item[1] for item in list_of_lists_file_size if
-                                Counter([item_inner[0] for item_inner in list_of_lists_file_size])[item[0]] > 1]
-        data_check_result[file_size] = same_name__file_dict
+        same_name_files = [file_item for file_item in data_check_result[file_size]
+                           if Counter([file_item_in for file_item_in in data_check_result[file_size]])[file_item] > 1]
+        data_check_result[file_size] = same_name_files
     return data_check_result
 
 
